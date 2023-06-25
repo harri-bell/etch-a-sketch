@@ -1,0 +1,26 @@
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sketch-container {
+  display: grid;
+  width: 800px;
+  height: 800px;
+  background-color: black;
+}
+
+.grid-element {
+  background-color: blue;
+  transition: 0.5;
+}
+
+.grid-element:hover {
+  background-color: white;
+}
