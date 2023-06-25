@@ -18,9 +18,11 @@ main {
 
 .grid-element {
   background-color: blue;
-  transition: 0.5;
+  transition-delay: 10s;
 }
 
 .grid-element:hover {
   background-color: white;
+  transition: 0s;
+
 }
