@@ -1,5 +1,5 @@
 const sketchContainer = document.querySelector('.sketch-container');
-
+const setSquaresBtn = document.querySelector('.set-squares-btn');
 
 function setupGrid(size) {
   sketchContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -9,8 +9,20 @@ function setupGrid(size) {
     gridElement.classList.add('grid-element');
     sketchContainer.appendChild(gridElement);
   }
-
 }
 
+function setSquareCount() {
+  clearGrid();
+  let squareCount = prompt('how many squares', '');
+  if (squareCount <= 100) {
+    return setupGrid(squareCount)
+  } else {
+    return alert('too big, try 100 or less');
+  };
+}
 
-setupGrid(4);
+function clearGrid() {
+  sketchContainer.innerHTML = '';
+}
+
+setSquaresBtn.addEventListener('click', setSquareCount)
